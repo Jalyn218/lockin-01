@@ -1,0 +1,177 @@
+/* ══ ORIGINAL STYLE THEMES ══ */
+
+/* Dark Room — the original */
+/* (already in your CSS as default, no data-theme needed) */
+
+/* Ember — warm dark, deeper amber tones */
+[data-theme="ember"] {
+  --bg: #110e0a;
+  --bg2: #17120d;
+  --cream: #f0dfc0;
+  --amber: #e07830;
+  --amber-dim: #904820;
+  --muted: #503828;
+  --border: #241a10;
+}
+
+/* Ivory — light version of the original */
+[data-theme="ivory"] {
+  --bg: #f4efe4;
+  --bg2: #ece6d8;
+  --cream: #1a1510;
+  --amber: #8a4e10;
+  --amber-dim: #a86820;
+  --muted: #6a5e48;
+  --border: #ccc4b0;
+}
+
+/* ══ CLEARER / BOLDER THEMES ══ */
+
+/* Clearer Dark — dark room but text is larger, heavier */
+[data-theme="clear-dark"] {
+  --bg: #0d0f14;
+  --bg2: #12151c;
+  --cream: #ffffff;
+  --amber: #e8a84a;
+  --amber-dim: #c07828;
+  --muted: #707070;
+  --border: #2a2e38;
+  --text-size-boost: 1;
+}
+
+/* Slate — dark blue, bold readable text */
+[data-theme="slate"] {
+  --bg: #0a0e18;
+  --bg2: #0e1420;
+  --cream: #f0f4ff;
+  --amber: #60a0f0;
+  --amber-dim: #3870c0;
+  --muted: #506080;
+  --border: #182030;
+}
+
+/* Clear Light — bright, high contrast, easy to read */
+[data-theme="clear-light"] {
+  --bg: #ffffff;
+  --bg2: #f0f0f0;
+  --cream: #101010;
+  --amber: #c05000;
+  --amber-dim: #e07020;
+  --muted: #606060;
+  --border: #d0d0d0;
+}
+
+/* ── ROSE — warm pink tones, dark ── */
+[data-theme="rose"] {
+  --bg: #140c0e;
+  --bg2: #1a1012;
+  --cream: #f4d8dc;
+  --amber: #d06070;
+  --amber-dim: #903040;
+  --muted: #502830;
+  --border: #281418;
+}
+
+/* ── ROSE LIGHT — pink but bright ── */
+[data-theme="rose-light"] {
+  --bg: #fdf0f2;
+  --bg2: #f5e4e8;
+  --cream: #1a0810;
+  --amber: #c03050;
+  --amber-dim: #e05070;
+  --muted: #806070;
+  --border: #e0c8cc;
+}
+
+/* ── OCEAN — deep teal, dark ── */
+[data-theme="ocean"] {
+  --bg: #080f14;
+  --bg2: #0c1418;
+  --cream: #c0e4f0;
+  --amber: #30b0d0;
+  --amber-dim: #1880a0;
+  --muted: #1a4858;
+  --border: #102030;
+}
+
+/* ── SAND — warm desert light ── */
+[data-theme="sand"] {
+  --bg: #f8f0e0;
+  --bg2: #f0e8d4;
+  --cream: #281c08;
+  --amber: #c07820;
+  --amber-dim: #e09838;
+  --muted: #907040;
+  --border: #ddd0b0;
+}
+
+/* ── MOSS — muted olive green, dark ── */
+[data-theme="moss"] {
+  --bg: #0c1008;
+  --bg2: #101408;
+  --cream: #d4e0b8;
+  --amber: #90b840;
+  --amber-dim: #608020;
+  --muted: #304818;
+  --border: #182010;
+}
+
+/* ── NOIR — pure black and white ── */
+[data-theme="noir"] {
+  --bg: #080808;
+  --bg2: #101010;
+  --cream: #f0f0f0;
+  --amber: #d0d0d0;
+  --amber-dim: #808080;
+  --muted: #383838;
+  --border: #202020;
+}
+
+/* ── LAVENDER — soft purple, light ── */
+[data-theme="lavender"] {
+  --bg: #f4f0fc;
+  --bg2: #ece8f8;
+  --cream: #14101c;
+  --amber: #7040c0;
+  --amber-dim: #9060e0;
+  --muted: #706888;
+  --border: #d0c8e8;
+}
+
+/* ── CRIMSON — deep red, dark ── */
+[data-theme="crimson"] {
+  --bg: #100808;
+  --bg2: #180c0c;
+  --cream: #f8d8d0;
+  --amber: #e03020;
+  --amber-dim: #a01810;
+  --muted: #581818;
+  --border: #281010;
+}
+
+/* boost font weight on clearer themes */
+[data-theme="clear-dark"] .home-count-label,
+[data-theme="clear-dark"] .form-label-top,
+[data-theme="clear-dark"] .wordmark,
+[data-theme="clear-dark"] .live-badge,
+[data-theme="clear-dark"] .time-field label,
+[data-theme="clear-dark"] .msg-user,
+[data-theme="clear-dark"] #chat-sidebar h1,
+[data-theme="slate"] .home-count-label,
+[data-theme="slate"] .form-label-top,
+[data-theme="slate"] .wordmark,
+[data-theme="slate"] .live-badge,
+[data-theme="slate"] .time-field label,
+[data-theme="slate"] .msg-user,
+[data-theme="slate"] #chat-sidebar h1,
+[data-theme="clear-light"] .home-count-label,
+[data-theme="clear-light"] .form-label-top,
+[data-theme="clear-light"] .wordmark,
+[data-theme="clear-light"] .live-badge,
+[data-theme="clear-light"] .time-field label,
+[data-theme="clear-light"] .msg-user,
+[data-theme="clear-light"] #chat-sidebar h1 {
+  font-weight: 400;   /* up from 300 */
+  letter-spacing: 0.25em; /* slightly tighter so it feels less wispy */
+  font-size: 11px;    /* up from 9-10px */
+}

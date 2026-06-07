@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="index-styles.css" />
+    <link rel="stylesheet" href="themes.css" />
+</head>
+<body class="welcome-body">
+
+    <div class="welcome-top-bar">
+        <button id="audio-toggle" class="theme-btn">🔔</button>
+        <button id="theme-toggle" class="theme-btn">🕯 Ember</button>
+    </div>
+
+    <div class="welcome-container">
+        <h1> Lock In Online </h1>
+            <div class="counts-row">
+            <div class="count-block">
+                <p id="locked-in-count" class="welcome-count">0</p>
+                <p>locked in right now</p>
+            </div>
+            <div class="count-divider"></div>
+            <div class="count-block">
+                <p id="live-count" class="welcome-count">0</p>
+                <p>online right now</p>
+            </div>
+            </div>
+        <form id="login-form">
+            <div class="login-container">
+                <div class="username-field">
+                    <label for="username">username</label>
+                    <input type="text" id="username" name="user-login" class="username-input" placeholder="enter your name" required />
+                </div>
+                <div class="form-label-top">how many hours are you targeting?</div>
+                <div class="time-inputs">
+                    <div class="time-field">
+                        <input type="number" id="hours" min="0" max="12" placeholder="0" />
+                        <label for="hours">hrs</label>
+                    </div>
+                    <span class="time-divider">:</span>
+                    <div class="time-field">
+                        <input type="number" id="minutes" min="0" max="59" placeholder="00" />
+                        <label for="minutes">min</label>
+                    </div>
+                </div>
+                <button class="lockin-button" type="submit">LOCK IN</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

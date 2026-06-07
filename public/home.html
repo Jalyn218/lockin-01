@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home-styles.css" />
+    <link rel="stylesheet" href="themes.css" />
+</head>
+    <body class="home-body">
+
+        <div class="top-bar">
+            <div class="wordmark">Lock In</div>
+            <div style="display:flex;align-items:center;gap:20px;">
+                <button id="audio-toggle" class="theme-btn">🔔</button>
+                <button id="theme-toggle" class="theme-btn">☀ Light</button>
+                <div class="live-badge">
+                <div class="pulse-dot"></div>
+                Live
+                </div>
+            </div>
+        </div>
+
+        <div class="home-container">
+            <div class="home-main">
+                <div class="home-counts-row">
+                    <div class="home-count-block">
+                        <p id="locked-in-count" class="home-count">0</p>
+                        <p class="home-count-label">locked in</p>
+                    </div>
+                    <div class="home-count-divider"></div>
+                    <div class="home-count-block">
+                        <p id="live-count" class="home-count">0</p>
+                        <p class="home-count-label">online</p>
+                    </div>
+                </div>
+                <h1>You have x hours and x minutes left</h1>
+                <form class="home-form-text" id="start-form">
+                    <div>
+                    <div class="form-label-top">how long will you lock in?</div>
+                    <div class="time-inputs">
+                        <div class="time-field">
+                            <input type="number" id="hours" min="0" max="12" placeholder="0" />
+                            <label for="hours">hrs</label>
+                        </div>
+                        <span class="time-divider">:</span>
+                        <div class="time-field">
+                            <input type="number" id="minutes" min="0" max="59" placeholder="00" />
+                            <label for="minutes">min</label>
+                        </div>
+                    </div>
+                    </div>
+                    <button type="submit" class="home-button">START</button>
+                </form>
+                <a href="exit.html">
+                    <button class="home-button">EXIT</button>
+                </a>
+            </div>
+            <div id="chat-sidebar">
+                <h1>CHAT</h1>
+                <div class="messages">
+                    <div class="message">
+                        <div class="msg-user">system</div>
+                        <p>Welcome to Lock In Online</p>
+                    </div>
+                </div>
+                <form id="chat-form">
+                    <input type="text" name="msg" id="message-input" class="chat-form-input" placeholder="Shhh no talking...">
+                </form>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="main.js"></script>
+        <script src="theme.js"></script>
+    </body>
+</html>

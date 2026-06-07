@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exit-styles.css" />
+    <link rel="stylesheet" href="themes.css" />
+</head>
+<body>
+   <div class="exit-container">
+        <div class="exit-label">session complete</div>
+        <h1>Well done,<br/>or not well done.</h1>
+        <div class="exit-stats">
+            <div class="stat-block">
+                <div class="stat-number" id="mins-studied">0</div>
+                <div class="stat-label">min studied</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-block">
+                <div class="stat-number" id="hrs-remaining">0</div>
+                <div class="stat-label">hrs remaining</div>
+            </div>
+        </div>
+        <div class="close-hint">you may close this tab</div>
+    </div>
+    <script src="theme.js"></script>
+    <script>
+        document.getElementById('mins-studied').textContent = Math.floor((parseInt(sessionStorage.getItem('sessionSeconds')) || 0) / 60);
+        document.getElementById('hrs-remaining').textContent = parseFloat(sessionStorage.getItem('targetHours') || 0).toFixed(1);
+    </script>
+</body>
+</html>
