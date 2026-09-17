@@ -11,7 +11,7 @@ const ROOM = 'general';
 let activeUsers = 0;
 let lockedIn = 0;
 
-app.use(express.static('public')); // put your HTML/CSS/JS files in a /public folder
+app.use(express.static('public')); 
 
 // io.to(ROOM).emit('message', data);  // To send a message 
 const messageHistory = []; // stores last 50 messages
@@ -32,7 +32,7 @@ io.on('connection', (socket) => {
   socket.on('send-message', (data) => {  // Received from main
     messageHistory.push(data);
     if (messageHistory.length > MAX_HISTORY) {
-      messageHistory.shift(); // remove oldest message
+      messageHistory.shift(); 
     }
     io.to(ROOM).emit('message', data);  // Sent to main
   });
