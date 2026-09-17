@@ -17,7 +17,6 @@ app.use(express.static('public'));
 const messageHistory = []; // stores last 50 messages
 const MAX_HISTORY = 50;
 
-  // ...existing code...
 io.on('connection', (socket) => {
   socket.isLockedIn = false;
 
